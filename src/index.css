@@ -1,0 +1,496 @@
+@font-face {
+  font-family: "magnat-light";
+  src: url("assets/fonts/magnattext-light-webfont.woff2") format("woff2"),
+    url("assets/fonts/magnattext-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "magnat-semi";
+  src: url("assets/fonts/magnattext-semibold-webfont.woff2") format("woff2"),
+    url("assets/fonts/magnattext-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+:root {
+  --light-orange: #fee4d7;
+  --mid-orange: #fba174;
+  --orange: #f75d10;
+  --dark-orange: #9e3805;
+  --darker-orange: #3b1502;
+  --light-blue: #85d8ea;
+  --mid-blue: #1e94ae;
+  --blue: #0d404c;
+  --dark-blue: #061e23;
+  --darker-blue: #030f11;
+  --grey-dark: #626262;
+  --grey-mid: #c5c5c5;
+  --grey-light: #efefef;
+  --main-width: 1224px;
+}
+
+h1 {
+  font-family: "magnat-semi", sans-serif;
+  font-size: 56px;
+  line-height: 72px;
+}
+
+h2 {
+  font-family: "magnat-light", sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+h3 {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 40px;
+}
+
+h4 {
+  font-family: "magnat-semi", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h5 {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h6 {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+p {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.slick-slider > div:first-child {
+  display: flex !important;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  left: -56px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.2s ease;
+
+  svg {
+    font-size: 32px;
+  }
+
+  &:hover svg {
+    font-size: 40px;
+    transition: 0.2s ease;
+  }
+}
+
+.slick-slider > div:last-child {
+  display: flex !important;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  right: -56px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.1s ease;
+
+  svg {
+    font-size: 32px;
+  }
+
+  &:hover svg {
+    font-size: 40px;
+    transition: 0.2s ease;
+  }
+}
+.slick-slide {
+  padding: 0 12px;
+}
+
+.slick-list {
+  margin: 0 -12px !important;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 0 !important;
+}
+
+.accordion__button {
+  background-color: transparent !important;
+  color: var(--blue) !important;
+  padding: 12px 16px !important;
+  border: solid 1px var(--grey-mid) !important;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+
+  &:hover {
+    border-color: var(--blue) !important;
+  }
+}
+
+.accordion__panel {
+  padding: 16px !important;
+  border: solid 1px var(--blue);
+  border-top-width: 0;
+  border-radius: 0 0 8px 8px;
+}
+
+.accordion__button[aria-expanded="true"] {
+  background-color: var(--blue) !important;
+  border: solid 1px var(--blue) !important;
+  font-weight: 600;
+  color: #fff !important;
+  align-items: start;
+  border-radius: 8px 8px 0 0;
+}
+
+.accordion__button:before {
+  height: 8px !important;
+  width: 8px !important;
+  margin-right: 4px !important;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  :root {
+    --main-width: 100%;
+  }
+
+  h1 {
+    font-family: "magnat-semi", sans-serif;
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  h2 {
+    font-family: "magnat-light", sans-serif;
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  h3 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+  }
+
+  h4 {
+    font-family: "magnat-semi", sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  h5 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  h6 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  p {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .slick-slider > div:first-child {
+    display: flex !important;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    left: -56px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.2s ease;
+
+    svg {
+      font-size: 32px;
+    }
+
+    &:hover svg {
+      font-size: 40px;
+      transition: 0.2s ease;
+    }
+  }
+
+  .slick-slider > div:last-child {
+    display: flex !important;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    right: -56px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.1s ease;
+
+    svg {
+      font-size: 32px;
+    }
+
+    &:hover svg {
+      font-size: 40px;
+      transition: 0.2s ease;
+    }
+  }
+  .slick-slide {
+    padding: 0 12px;
+  }
+
+  .slick-list {
+    margin: 0 -12px !important;
+  }
+
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 0 !important;
+  }
+
+  .accordion__button {
+    background-color: transparent !important;
+    color: var(--blue) !important;
+    padding: 12px 16px !important;
+    border: solid 1px var(--grey-mid) !important;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+
+    &:hover {
+      border-color: var(--blue) !important;
+    }
+  }
+
+  .accordion__panel {
+    padding: 16px !important;
+    border: solid 1px var(--blue);
+    border-top-width: 0;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .accordion__button[aria-expanded="true"] {
+    background-color: var(--blue) !important;
+    border: solid 1px var(--blue) !important;
+    font-weight: 600;
+    color: #fff !important;
+    align-items: start;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .accordion__button:before {
+    height: 8px !important;
+    width: 8px !important;
+    margin-right: 4px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --main-width: 100%;
+  }
+
+  h1 {
+    font-family: "magnat-semi", sans-serif;
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  h2 {
+    font-family: "magnat-light", sans-serif;
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  h3 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 32px;
+  }
+
+  h4 {
+    font-family: "magnat-semi", sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  h5 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  h6 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  p {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .slick-slider > div:first-child {
+    display: flex !important;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    left: -56px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.2s ease;
+
+    svg {
+      font-size: 32px;
+    }
+
+    &:hover svg {
+      font-size: 40px;
+      transition: 0.2s ease;
+    }
+  }
+
+  .slick-slider > div:last-child {
+    display: flex !important;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    right: -56px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.1s ease;
+
+    svg {
+      font-size: 32px;
+    }
+
+    &:hover svg {
+      font-size: 40px;
+      transition: 0.2s ease;
+    }
+  }
+  .slick-slide {
+    padding: 0 12px;
+  }
+
+  .slick-list {
+    margin: 0 -12px !important;
+  }
+
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 0 !important;
+  }
+
+  .accordion__button {
+    background-color: transparent !important;
+    color: var(--blue) !important;
+    padding: 12px 16px !important;
+    border: solid 1px var(--grey-mid) !important;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+
+    &:hover {
+      border-color: var(--blue) !important;
+    }
+  }
+
+  .accordion__panel {
+    padding: 16px !important;
+    border: solid 1px var(--blue);
+    border-top-width: 0;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .accordion__button[aria-expanded="true"] {
+    background-color: var(--blue) !important;
+    border: solid 1px var(--blue) !important;
+    font-weight: 600;
+    color: #fff !important;
+    align-items: start;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .accordion__button:before {
+    height: 8px !important;
+    width: 8px !important;
+    margin-right: 4px !important;
+  }
+}
